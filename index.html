@@ -1,0 +1,211 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EsToDoList</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 text-slate-800 min-h-screen">
+
+  <!-- Cabeçalho -->
+  <header class="bg-indigo-600 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <h1 class="text-xl md:text-2xl font-bold">EsToDoList</h1>
+
+      <span class="hidden md:block text-sm">
+        Organize sua rotina escolar
+      </span>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal: 3 colunas no notebook -->
+  <main class="max-w-5xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- Coluna da esquerda: formulário, pesquisa e filtros -->
+    <section class="bg-white rounded-xl shadow p-4 space-y-4 lg:col-span-1">
+
+      <!-- Formulário -->
+      <form class="flex flex-col md:flex-row lg:flex-col gap-2">
+
+        <input
+          type="text"
+          placeholder="Nova tarefa"
+          class="border rounded-lg px-3 py-2 md:flex-1 lg:flex-none min-w-0 w-full"
+        >
+
+        <input
+          type="date"
+          class="border rounded-lg px-3 py-2 md:flex-1 lg:flex-none min-w-0 w-full"
+        >
+
+        <button
+          type="submit"
+          class="bg-indigo-600 text-white rounded-lg px-4 py-2 font-semibold hover:bg-indigo-700"
+        >
+          Adicionar
+        </button>
+
+      </form>
+
+      <!-- Pesquisa -->
+      <input
+        type="search"
+        placeholder="Pesquisar tarefa..."
+        class="w-full border rounded-lg px-3 py-2"
+      >
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap gap-2">
+
+        <button
+          type="button"
+          class="px-3 py-2 rounded-full bg-indigo-600 text-white whitespace-nowrap"
+        >
+          Todas
+        </button>
+
+        <button
+          type="button"
+          class="px-3 py-2 rounded-full bg-slate-200 whitespace-nowrap"
+        >
+          Pendentes
+        </button>
+
+        <button
+          type="button"
+          class="px-3 py-2 rounded-full bg-slate-200 whitespace-nowrap"
+        >
+          Concluídas
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- Coluna da direita: lista ocupa duas colunas -->
+    <section class="lg:col-span-2">
+
+      <ul class="space-y-3">
+
+        <!-- Tarefa 1 -->
+        <li class="bg-white rounded-xl shadow p-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+          <label class="flex items-start gap-3 min-w-0">
+            <input type="checkbox" class="mt-1 w-4 h-4 shrink-0">
+
+            <span class="min-w-0">
+              <span class="block font-medium">
+                Trabalho de História
+              </span>
+
+              <span class="block text-sm text-slate-500">
+                20/10/2026
+              </span>
+            </span>
+          </label>
+
+          <div class="flex gap-2 md:shrink-0">
+            <button
+              type="button"
+              class="px-3 py-2 rounded-lg bg-amber-100 text-amber-800 hover:bg-amber-200"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="px-3 py-2 rounded-lg bg-rose-100 text-rose-700 hover:bg-rose-200"
+            >
+              Excluir
+            </button>
+          </div>
+
+        </li>
+
+        <!-- Tarefa 2 -->
+        <li class="bg-white rounded-xl shadow p-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+          <label class="flex items-start gap-3 min-w-0">
+            <input type="checkbox" class="mt-1 w-4 h-4 shrink-0">
+
+            <span class="min-w-0">
+              <span class="block font-medium">
+                Estudar para a prova de Matemática
+              </span>
+
+              <span class="block text-sm text-slate-500">
+                22/10/2026
+              </span>
+            </span>
+          </label>
+
+          <div class="flex gap-2 md:shrink-0">
+            <button
+              type="button"
+              class="px-3 py-2 rounded-lg bg-amber-100 text-amber-800 hover:bg-amber-200"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="px-3 py-2 rounded-lg bg-rose-100 text-rose-700 hover:bg-rose-200"
+            >
+              Excluir
+            </button>
+          </div>
+
+        </li>
+
+        <!-- Tarefa 3 -->
+        <li class="bg-white rounded-xl shadow p-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+          <label class="flex items-start gap-3 min-w-0">
+            <input type="checkbox" checked class="mt-1 w-4 h-4 shrink-0">
+
+            <span class="min-w-0">
+              <span class="block font-medium">
+                Entregar projeto no GitHub
+              </span>
+
+              <span class="block text-sm text-slate-500">
+                08/10/2026
+              </span>
+            </span>
+          </label>
+
+          <div class="flex gap-2 md:shrink-0">
+            <button
+              type="button"
+              class="px-3 py-2 rounded-lg bg-amber-100 text-amber-800 hover:bg-amber-200"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="px-3 py-2 rounded-lg bg-rose-100 text-rose-700 hover:bg-rose-200"
+            >
+              Excluir
+            </button>
+          </div>
+
+        </li>
+
+      </ul>
+
+      <!-- Contador de tarefas -->
+      <p class="mt-4 text-sm text-slate-500">
+        2 tarefas pendentes
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+```
